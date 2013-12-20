@@ -23,7 +23,7 @@
   .d-cell
     vertical-align: top
     position: relative
-    padding: $headerPaddingTb $headerPaddingLr
+    padding: $header-padding-vertical $header-padding-horizontal
 
   .desktop 
     .notif
@@ -31,14 +31,14 @@
       width: 160px 
       max-width: 160px 
       min-width: 160px 
-      padding: $headerPaddingTb 0px
+      padding: $header-padding-vertical 0px
     .settings
       background: #FFF
       border-left: 5px solid #EEEEEE
       width: 175px 
       max-width: 175px 
       min-width: 175px 
-      padding: $headerPaddingTb 10px $headerPaddingTb 0px 
+      padding: $header-padding-vertical 10px $header-padding-vertical 0px 
     .search  
       background: #FFF
       text-align: center 
@@ -89,7 +89,7 @@
   color: #333
   font-size: 16px
   font-weight: bold
-  height: $headerHeight - ($headerPaddingTb * 2) // -2px box shadow
+  height: $header-height - ($header-padding-vertical * 2) // -2px box shadow
   margin: 0
   padding: 0 30px
   text-align: center
@@ -177,8 +177,8 @@
   background: $orange
   color: #FFF
   display: inline-block
-  height: $headerHeight - ($headerPaddingTb * 2)  // - 2px for box shadow
-  line-height: $headerHeight - ($headerPaddingTb * 2) // line-height = height
+  height: $header-height - ($header-padding-vertical * 2)  // - 2px for box shadow
+  line-height: $header-height - ($header-padding-vertical * 2) // line-height = height
   overflow: hidden
   padding: 0 16px
   position: relative
@@ -195,7 +195,7 @@
   &:before   
     content: 'l'
     float: left
-    font-family: $fontPictos
+    font-family: $font-pictos
     font-size: 22px
     line-height: 42px
 
@@ -204,8 +204,8 @@
   background: #c8c8c8
   color: #333
   display: inline-block
-  height: $headerHeight - ($headerPaddingTb * 2)  // - 2px for box shadow
-  line-height: $headerHeight - ($headerPaddingTb * 2) // line-height = height
+  height: $header-height - ($header-padding-vertical * 2)  // - 2px for box shadow
+  line-height: $header-height - ($header-padding-vertical * 2) // line-height = height
   overflow: hidden
   padding: 0 16px
   position: relative
@@ -221,5 +221,5 @@
   &:before   
     content: 'y'
     float: left
-    font-family: $fontPictos
+    font-family: $font-pictos
     font-size: 22px

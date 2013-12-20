@@ -11,7 +11,7 @@
   z-index: 10
     
 #ct-left, #ct-right 
-  background: $panelBackgroundColor
+  background: $panel-background-color
   color: #FFF
   position: absolute
   overflow: scroll !important
@@ -21,13 +21,13 @@
   left: 0px
   top: 0px
   z-index: 0
-  width: $panelDesktopLeftWidth
+  width: $panel-desktop-left-width
 
 #ct-right
   right: 0px
   top: 0px
   z-index: 0
-  width: $panelDesktopRightWidth
+  width: $panel-desktop-right-width
 
   & > .inner
     padding: 15px 20px 
@@ -87,14 +87,14 @@
     display: none
 
   #ct-middle
-    +translateX($panelDesktopLeftWidth)
+    +translateX($panel-desktop-left-width)
     +transition-property(transform)
     +transition-duration(0.25s)
     +transform-style(flat)
 
 .enable-transformX.ct-right-open 
   #ct-middle
-    +translateX(-$panelDesktopRightWidth)
+    +translateX(-$panel-desktop-right-width)
     +transition-property(transform)
     +transition-duration(0.25s)
     +transform-style(flat)

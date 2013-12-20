@@ -1,0 +1,154 @@
+section > .page-header, section > .lead
+  color: #5a5a5a
+
+.bs-docs-example
+  position: relative
+  margin: 15px 0
+  padding: 39px 19px 14px
+  *padding-top: 19px
+  background-color: #fff
+  border: 1px solid #ddd
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+
+  &:after
+    content: "Example"
+    position: absolute
+    top: -1px
+    left: -1px
+    padding: 3px 7px
+    font-size: 12px
+    font-weight: bold
+    background-color: #f5f5f5
+    border: 1px solid #ddd
+    color: #9da0a4
+    -webkit-border-radius: 4px 0 4px 0
+    -moz-border-radius: 4px 0 4px 0
+    border-radius: 4px 0 4px 0
+
+
+// Typography
+
+
+// Tables
+.table 
+  & > thead > tr > th,
+  & > tbody > tr > td
+    border: 0
+
+.table 
+  th
+    font-weight: normal
+  td
+    font-weight: bold
+
+.table.orange,
+.table.green
+  th
+    color: $white
+
+.table.orange
+  th
+    background-color: $orange
+
+.table.green
+  th
+    background-color: $green
+
+.table-striped > tbody > tr:nth-child(odd) > td, 
+.table-striped > tbody > tr:nth-child(odd) > th
+  background-color: transparent
+
+.table-striped > tbody > tr:nth-child(even) > td, 
+.table-striped > tbody > tr:nth-child(even) > th
+  background-color: #F5F5F5
+
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th
+  background-color: #F5F5F5
+
+// Forms
+input.form-control,
+textarea.form-control
+  +border-radius(0)
+
+input.form-control-unstyled,
+textarea.form-control-unstyled
+  border: 0
+  +box-shadow(none)
+  &:focus
+    +box-shadow(none)
+
+input.form-control-settings
+  border: 0
+  background-color: #1e1e1e
+  color: #aaa
+
+// Buttons
+.btn
+  border-width: 0
+  font-family: bariol
+  padding: 4px 12px
+  outline: none !important
+  -webkit-font-smoothing: antialiased
+  .glyphicon
+    text-align: left
+    width: 1.3em
+    top: 1px
+    font-size: 13px
+
+  .glyphicon-chevron-down
+    text-align: right
+  .caret
+    margin-left: 6px
+
+.btn-lg
+  padding: 8px 20px
+  .glyphicon
+    top: 2px
+    font-size: 16px
+  .caret
+    margin-left: 10px
+
+.btn-sm
+  padding: 1px 7px
+  .glyphicon
+    top: 0px
+    font-size: 10px
+  .caret
+    margin-left: 4px
+
+.btn-group
+  & > button:nth-child(2)
+    border-left-width: 1px
+    .caret
+      margin-left: 0
+
+// Navs
+
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover, 
+.nav-tabs > li.active > a:focus
+  background-color: #F5F5F5
+  border-color: #F5F5F5
+  color: $text-color
+  font-weight: bold
+
+.nav-tabs > li > a
+  font-weight: bold
+  color: #939393
+
+.nav-tabs > li > a:hover
+  color: $text-color
+  background-color: #F5F5F5
+  border-color: #F5F5F5
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus
+  background-color: #F5F5F5
+  border-color: #F5F5F5
+
+.nav-tabs
+  border-bottom: 4px solid #F5F5F5
