@@ -1,12 +1,9 @@
 @import "compass"
-
-@import "custom-bootstrap/variables"
+@import "variables"
 @import "bootstrap"
-@import "custom-bootstrap/overides"
-
 @import "spinner"
 @import "global"
-@import "vendor"
+@import "vendors"
 @import "core"
 @import "contacts"
 @import "invoicing"
@@ -18,6 +15,8 @@
 //  ========
 //  = Body =
 //  ========
+*
+  -webkit-font-smoothing: antialiased
 
 body 
   -webkit-touch-callout: none
@@ -26,8 +25,6 @@ body
   -moz-user-select: none
   -ms-user-select: none
   user-select: none
-  -webkit-font-smoothing: antialiased
-  +opacity(0.999)
 
 // .http-error
 //   height: 400px
