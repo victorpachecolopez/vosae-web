@@ -198,10 +198,7 @@ module.exports = (grunt) ->
         dest: WEBAPP_BUILD_DIR + "locales/locale-<%= grunt.option(\"i18n_lang\") %>.js"
       webapp_css:
         src: [
-          WEBAPP_CSS_DIR + "fullcalendar.css",
-          WEBAPP_CSS_DIR + "select2.css",
-          WEBAPP_CSS_DIR + "bootstrap.css",
-          WEBAPP_CSS_DIR + "backend.css"
+          WEBAPP_CSS_DIR + "webapp.css"
         ]
         dest: WEBAPP_BUILD_DIR + "webapp.css"
 
