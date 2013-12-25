@@ -68,3 +68,7 @@ require 'views/organizer/vosaeEventShow'
 require 'views/organizer/vosaeEventEdit'
 require 'views/organizer/calendarListsShow'
 require 'views/organizer/calendarListsAdd'
+
+require 'views/bootstrap/alert'
+require 'views/bootstrap/button'
+require 'views/bootstrap/typeahead'
