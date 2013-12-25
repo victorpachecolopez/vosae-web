@@ -1,9 +1,9 @@
 Vosae.TenantsAddView = Vosae.PageTenantView.extend
   classNames: ["outlet-tenants", "page-add-tenant"]
   
-  inStepIdentity: false
+  inStepIdentity: true
   inStepCoords: false
-  inStepRegistration: true
+  inStepRegistration: false
   formIsValid: true
   registrationCountry: null
 

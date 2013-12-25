@@ -65,6 +65,7 @@ $ gem install compass
 $ gem install sass
 $ gem install sass-rails
 $ gem install bootstrap-sass --version 2.3.2.2
+$ gem install --pre sass-css-importer
 ```
 
 #### Install Grunt:
