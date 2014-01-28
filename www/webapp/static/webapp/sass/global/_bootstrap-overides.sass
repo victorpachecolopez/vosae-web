@@ -43,12 +43,21 @@ section > .page-header, section > .lead
   & > tbody > tr > td
     border: 0
 
-.table 
   th
     font-weight: normal
   td
     font-weight: bold
 
+  th, td
+    // vertical-align: middle
+    // border: 0
+    // padding: 10px 5px
+
+    &:first-child
+      padding-left: 15px
+    
+    &:last-child
+      padding-right: 15px
 .table.orange,
 .table.green
   th
@@ -74,6 +83,7 @@ section > .page-header, section > .lead
 .table-hover > tbody > tr:hover > th
   background-color: #F5F5F5
 
+
 // Forms
 input.form-control,
 textarea.form-control
@@ -82,6 +92,8 @@ textarea.form-control
 input.form-control-unstyled,
 textarea.form-control-unstyled
   border: 0
+  background: transparent
+  padding-left: 0
   +box-shadow(none)
   &:focus
     +box-shadow(none)
@@ -105,7 +117,8 @@ input.form-control-settings
 
 .form-control
   height: 28px
-  font-size: 15px
+  font-size: 16px
+  color: $text-color
   &:focus
     -webkit-box-shadow: none
     box-shadow: none
@@ -133,7 +146,7 @@ input.form-control-settings
 .btn
   border-width: 0
   font-family: bariol
-  padding: 4px 12px
+  padding: 3px 12px
   outline: none !important
   -webkit-font-smoothing: antialiased
   .glyphicon
@@ -146,6 +159,11 @@ input.form-control-settings
     text-align: right
   .caret
     margin-left: 6px
+
+  [class^="picto-"],
+  [class*=" picto-"]
+    font-size: 14px
+    padding-right: 5px
 
 .btn-lg
   padding: 8px 20px
@@ -169,8 +187,9 @@ input.form-control-settings
     .caret
       margin-left: 0
 
-.btn-darkgrey
-  @include button-variant($text-color, $darkgrey, $darkgrey)
+.dropdown-menu .divider
+  margin: 5px 0
+
 
 // Navs
 .nav-tabs > li.active > a, 

@@ -71,4 +71,3 @@ require 'views/organizer/calendarListsAdd'
 
 require 'views/bootstrap/alert'
 require 'views/bootstrap/button'
-require 'views/bootstrap/typeahead'

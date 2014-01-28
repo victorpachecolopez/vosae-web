@@ -7,14 +7,13 @@
         {{#each phone in phones}}
         <tr>
           <td>
-            <a class="btn-delete orange" {{action deletePhone phone}}>
+            <a class="btn btn-icon btn-primary" {{action deletePhone phone}}>
               <i class="picto-delete"></i>
             </a>
           </td>
           <td>
             {{view view.combinedPhoneTypesField 
               phoneBinding      = "phone"
-              containerCssClass = "green"
               hideSearchField   = "true"
               contentBinding    = "Vosae.phoneCombinedTypes"
               valueBinding      = "combinedTypes"
@@ -25,14 +24,14 @@
             {{view Vosae.AutoGrowTextField
               valueBinding = "phone.phone"
               maxlength    = "16"
-              classNames   = "edit bold input-small"
+              classNames   = "form-control form-control-unstyled text-primary text-bold"
               placeholder  = "{% trans 'Number' context 'phone' %}" }}
           </td>
         </tr>
         {{/each}}
         <tr class="add" {{action addPhone}}>
           <td colspan="3">
-            <a class="btn-add green">
+            <a class="btn btn-icon btn-success">
               <i class="picto-add"></i>
             </a>
             <strong>{% trans  "Add phone number" %}</strong>
@@ -46,7 +45,7 @@
         {{#each email in emails}}
         <tr>
           <td>
-            <a class="btn-delete orange" {{action deleteEmail email}}>
+            <a class="btn btn-icon btn-primary" {{action deleteEmail email}}>
               <i class="picto-delete"></i>
             </a>
           </td>
@@ -54,7 +53,6 @@
             {{view view.emailTypesField 
               contentBinding    = "Vosae.emailTypeChoice"
               valueBinding      = "email.type"
-              containerCssClass = "green"
               hideSearchField   = "true"
               optionLabelPath   = "content.name"
               optionValuePath   = "content.value" }}
@@ -63,14 +61,14 @@
             {{view Vosae.AutoGrowTextField
               valueBinding = "email.email"
               maxlength    = "64"
-              classNames   = "edit bold input-small"
+              classNames   = "form-control form-control-unstyled text-bold"
               placeholder  = "{% trans 'E-mail' %}" }}
           </td>
         </tr>
         {{/each}}
         <tr class="add" {{action addEmail}}>
           <td colspan="3">
-            <a class="btn-add green">
+            <a class="btn btn-icon btn-success">
               <i class="picto-add"></i>
             </a>
             <strong>{% trans  "Add email address" %}</strong>
@@ -89,37 +87,37 @@
             {{view Em.TextField
               valueBinding = "address.streetAddress"
               maxlength    = "128"
-              classNames   = "edit address"
+              classNames   = "form-control form-control-unstyled address"
               placeholder  = "N°, {% trans 'Address' %}" }}
             {{view Em.TextField
               valueBinding = "address.extendedAddress"
               maxlength    = "128"
-              classNames   = "edit extended-address"
+              classNames   = "form-control form-control-unstyled extended-address"
               placeholder  = "{% trans 'Extended address' %}" }}
             {{view Em.TextField
               valueBinding = "address.postofficeBox"
               maxlength    = "64"
-              classNames   = "edit postoffice-box"
+              classNames   = "form-control form-control-unstyled postoffice-box"
               placeholder  = "{% trans 'Postoffice box' %}" }}
             {{view Em.TextField
               valueBinding = "address.postalCode"
               maxlength    = "64"
-              classNames   = "edit postal-code"
+              classNames   = "form-control form-control-unstyled postal-code"
               placeholder  = "{% trans 'Postal code' %}" }}
             {{view Em.TextField
               valueBinding = "address.city"
               maxlength    = "64"
-              classNames   = "edit city"
+              classNames   = "form-control form-control-unstyled city"
               placeholder  = "{% trans 'City' %}" }}
             {{view Em.TextField
               valueBinding = "address.state"
               maxlength    = "64"
-              classNames   = "edit state"
+              classNames   = "form-control form-control-unstyled state"
               placeholder  = "{% trans 'State' %}" }}
             {{view Em.TextField
               valueBinding = "address.country"
               maxlength    = "64"
-              classNames   = "edit country"
+              classNames   = "form-control form-control-unstyled country"
               placeholder  = "{% trans 'Country' %}" }}
             {{view view.addressTypesField 
               contentBinding    = "Vosae.addressTypeChoice"
@@ -128,7 +126,7 @@
               valueBinding      = "address.type"
               optionLabelPath   = "content.name"
               optionValuePath   = "content.value" }} 
-            <a class="btn-delete orange" {{action deleteAddress address}}>
+            <a class="btn btn-icon btn-primary" {{action deleteAddress address}}>
               <i class="picto-delete"></i>
             </a>
           </td>
@@ -136,7 +134,7 @@
         {{/each}}
         <tr class="add" {{action addAddress}}>
           <td colspan="3">
-            <a class="btn-add green">
+            <a class="btn btn-icon btn-success">
               <i class="picto-add"></i>
             </a>
             <strong>{% trans  "Add postal address" %}</strong>

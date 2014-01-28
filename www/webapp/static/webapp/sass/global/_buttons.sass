@@ -2,7 +2,70 @@
 //  = Partials stylesheet for buttons =
 //  ===================================
 
-// // Button
+// Button
+.btn-darkgrey
+  @include button-variant($text-color, $darkgrey, $darkgrey)
+
+.btn-panel
+  display: inline-block
+  position: relative
+  text-decoration: none
+  width: 100%
+  text-align: left
+  +box-sizing(border-box)
+
+.btn-yellow
+  @include button-variant(#242424, $yellow, $yellow)
+
+.btn-toolbar.pull-right > .btn-group
+  margin-left: 10px
+
+.btn-toolbar.pull-left > .btn-group
+  margin-right: 10px
+
+.btn-rounded
+  +border-radius(100px)
+
+.btn-group >
+  .btn
+    &:first-of-type:not(.btn-rounded)
+      -webkit-border-top-left-radius: 4px !important
+      -moz-border-radius-topleft: 4px !important
+      border-top-left-radius: 4px !important
+      -webkit-border-bottom-left-radius: 4px !important
+      -moz-border-radius-bottomleft: 4px !important
+      border-bottom-left-radius: 4px !important
+    &:last-of-type:not(.btn-rounded)
+      -webkit-border-top-right-radius: 4px !important
+      -moz-border-radius-topright: 4px !important
+      border-top-right-radius: 4px !important
+      -webkit-border-bottom-right-radius: 4px !important
+      -moz-border-radius-bottomright: 4px !important
+      border-bottom-right-radius: 4px !important
+  .dropdown-toggle
+    -webkit-border-top-right-radius: 4px !important
+    -moz-border-radius-topright: 4px !important
+    border-top-right-radius: 4px !important
+    -webkit-border-bottom-right-radius: 4px !important
+    -moz-border-radius-bottomright: 4px !important
+    border-bottom-right-radius: 4px !important
+
+
+.btn-icon
+  height: 22px
+  line-height: 22px
+  width: 22px
+  text-align: center
+  padding: 0
+  margin: 0
+  +border-radius(500px)
+
+  i
+    padding: 0 !important
+    margin: 0 !important
+    line-height: 22px !important
+    font-size: 13px !important
+
 // .btn
 //   background-image: none
 //   border: 0
