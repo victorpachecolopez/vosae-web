@@ -8,15 +8,15 @@
         <th class="reference">{% trans "Reference" context "table-headers" %}</th>
         <th class="description">{% trans "Description" context "table-headers" %}</th>
         <th class="quantity">{% trans "Qty" context "table-headers" %}</th>
-        <th class="unit-price">{% trans "Unit price (excl. tax)" context "table-headers" %}</th>
+        <th class="unit-price">{% filter linebreaksbr %}{% trans "Unit price (excl. tax)" context "table-headers" %}{% endfilter %}</th>
         <th class="tax">{% trans "Tax" context "table-headers" %}</th>
-        <th class="total">{% trans "Total (excl. tax)" context "table-headers" %}</th>
+        <th class="total">{% filter linebreaksbr %}{% trans "Total (excl. tax)" context "table-headers" %}{% endfilter %}</th>
       </tr>
     </thead>
     <tbody>
       {{#if currentRevision.lineItems.length}}
         {{#each currentRevision.lineItems}}
-          <tr>
+          <tr {{bind-attr class="optional"}}>
             <td class="actions">
               <a {{action 'deleteLineItem' this}}>
                 <i class="picto-delete"></i>
@@ -29,13 +29,13 @@
                 placeholder="{% trans 'Reference' %}…" }}
             </td>
             <td class="description">
-              {{view view.lineItemTextArea
+              {{view Vosae.Components.SimpleEditor
                 currentItemBinding="this"
                 valueBinding="description"
-                maxlength="512"
-                resize="none"
+                maxLength=1024
                 classNames="edit description"
                 placeholder="{% trans 'Description' %}…" }}
+              {{#if optional}}<p class="optional-label">{% trans "Optional" context "line item" %}</p>{{/if}}
             </td>
             <td class="quantity">
               {{view view.lineItemQuantityField
@@ -59,6 +59,7 @@
             </td>
             <td class="total">
               {{this.displayTotal}}
+              {{#if optional}}<p class="optional-label">{% trans "Optional" context "line item" %}</p>{{/if}}
             </td>
           </tr>
         {{/each}}

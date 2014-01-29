@@ -140,6 +140,8 @@ module.exports = (grunt) ->
           WEBAPP_JS_VENDOR_DIR + "color.js",
           WEBAPP_JS_VENDOR_DIR + "autosize.js",
           WEBAPP_JS_VENDOR_DIR + "fullcalendar.js",
+          WEBAPP_JS_VENDOR_DIR + "ckeditor.js",
+          WEBAPP_JS_VENDOR_DIR + "ckeditor.lang-all.js",
           WEBAPP_JS_VENDOR_DIR + "handlebars.js",
           WEBAPP_JS_VENDOR_DIR + "ember.js",
           WEBAPP_JS_VENDOR_DIR + "ember-data.js"
@@ -181,6 +183,8 @@ module.exports = (grunt) ->
           WEBAPP_JS_VENDOR_DIR + "color.js",
           WEBAPP_JS_VENDOR_DIR + "autosize.min.js",
           WEBAPP_JS_VENDOR_DIR + "fullcalendar.js",
+          WEBAPP_JS_VENDOR_DIR + "ckeditor.js",
+          WEBAPP_JS_VENDOR_DIR + "ckeditor.lang-all.js",
           WEBAPP_JS_VENDOR_DIR + "handlebars.js",
           WEBAPP_JS_VENDOR_DIR + "ember.min.js",
           WEBAPP_JS_VENDOR_DIR + "ember-data.min.js"
@@ -199,6 +203,7 @@ module.exports = (grunt) ->
           WEBAPP_CSS_DIR + "fullcalendar.css",
           WEBAPP_CSS_DIR + "select2.css",
           WEBAPP_CSS_DIR + "bootstrap.css",
+          WEBAPP_CSS_DIR + "ckeditor.css",
           WEBAPP_CSS_DIR + "backend.css"
         ]
         dest: WEBAPP_BUILD_DIR + "webapp.css"

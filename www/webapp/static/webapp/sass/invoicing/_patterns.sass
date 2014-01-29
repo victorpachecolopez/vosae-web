@@ -80,28 +80,78 @@
     &.tax
       text-align: right
 
+  thead th
+    vertical-align: middle
+
+    &.unit-price
+      line-height: 18px
+
+  td
+    vertical-align: top
+    font-weight: normal
+
+    &.description
+      word-break: break-word
+
 
 // Table line items
 .table-line-items
   th, td
+    font-weight: normal
+
     &.actions
       text-align: center
+    &.reference
+      min-width: 120px
     &.quantity
       text-align: right
-      width: 75px
+      min-width: 70px
     &.unit-price
       text-align: right
-      width: 100px
+      min-width: 90px
     &.tax
       text-align: right
+      min-width: 100px
     &.total
       text-align: right
+      min-width: 100px
+
+  thead th
+    vertical-align: middle
+
+    &.unit-price,
+    &.total
+      line-height: 18px
+
   td
+    vertical-align: top
+
+    &.description
+      word-break: break-word
+
     &.quantity,
     &.unit-price,
     &.tax,
     &.total
       white-space: nowrap
+
+  tr.optional td
+    &.description
+      .optional-label
+        font-size: 14px
+        line-height: 20px
+        color: $green
+        text-transform: uppercase
+
+    &.quantity,
+    &.unit-price,
+    &.tax,
+    &.total
+      font-style: italic
+
+      .optional-label
+        font-size: 12px
+        line-height: 12px
 
   &.edit
     tr:hover td.actions a
@@ -111,6 +161,7 @@
 
     td
       padding: 5px 5px
+      font-weight: normal
 
       &:last-child
         padding-right: 15px
