@@ -1,3 +1,53 @@
+// Main class for each page in app invoicing
+.app-invoicing
+  position: relative
+  padding: 0 40px
+
+  .nav-tabs > li:not(:first-child)
+    margin-left: 15px
+
+  section
+    &.border-top
+      border-top: 5px solid $grey
+      
+    &.border-bottom
+      border-bottom: 5px solid $grey
+
+    &.with-head
+      border-bottom: 0
+      
+      & > .header
+        border-bottom: 5px solid $grey
+        padding-top: 30px 
+        padding-bottom: 5px
+        margin-bottom: 15px 
+
+        .invoice-base-type
+          text-transform: uppercase
+
+        .invoice-base-noref
+          font-size: 20px
+          color: #999
+          font-weight: normal
+          padding-left: 5px
+
+        h4
+          margin: 0
+          padding-left: 15px
+          font-size: 140%
+    
+    &:last-child
+      border-bottom: 0
+
+  .actions-form
+    margin-top: 10px
+    text-align: right
+
+
+.invoicebase-edit-billing-address-block
+  .dropdown-address
+    position: relative
+
 .table-see-more
   margin-top: 15px
 
@@ -23,13 +73,6 @@
   td.date input
     width: 90px
     padding: 0
-
-  // td.type, td.cur
-  //   .select2-choice
-  //     font-weight: normal
-  //     padding: 0
-  //     & > div
-  //       display: none
 
   td.amount input
     padding: 0
@@ -61,7 +104,6 @@
     &.status
       text-align: right
 
-
 // Table quotations
 .table-quotations
   th, td
@@ -79,7 +121,6 @@
       text-align: right
     &.tax
       text-align: right
-
 
 // Table line items
 .table-line-items
@@ -157,7 +198,6 @@
       .select2-arrow
         display: none
 
-
 // Table invoice summary
 .table-invoice-summary
   font-size: 15px
@@ -230,53 +270,3 @@
   input.fileupload.fill
     width: 0
     height: 0
-
-
-.app-invoicing
-  position: relative
-  padding: 0 40px
-
-  .nav-tabs > li:not(:first-child)
-    margin-left: 15px
-
-  section
-    &.border-top
-      border-top: 5px solid $grey
-      
-    &.border-bottom
-      border-bottom: 5px solid $grey
-
-    &.with-head
-      border-bottom: 0
-      
-      & > .header
-        border-bottom: 5px solid $grey
-        padding-top: 30px 
-        padding-bottom: 5px
-        margin-bottom: 15px 
-
-        .invoice-base-type
-          text-transform: uppercase
-
-        .invoice-base-noref
-          font-size: 20px
-          color: #999
-          font-weight: normal
-          padding-left: 5px
-
-        h4
-          margin: 0
-          padding-left: 15px
-          font-size: 140%
-    
-    &:last-child
-      border-bottom: 0
-
-  .actions-form
-    margin-top: 10px
-    text-align: right
-
-
-.invoicebase-edit-billing-address-block
-  .dropdown-address
-    position: relative

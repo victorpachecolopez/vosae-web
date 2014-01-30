@@ -62,10 +62,6 @@ section > .page-header, section > .lead
     &:last-child
       padding-right: 15px
 
-// .table-striped
-//   tr:nth-of-type(even)
-//     background: #F7F7F7
-
 .table-primary,
 .table-success
   th
@@ -112,12 +108,12 @@ textarea.form-control-unstyled
   &:focus
     +box-shadow(none)
 
-
-
 input.form-control-settings
   border: 0
   background-color: #1e1e1e
-  color: #666
+  color: #AAA
+  +input-placeholder(#444)
+  +textarea-placeholder(#444)
 
 .form-group
   &.has-no-error
@@ -190,7 +186,7 @@ input.form-control-settings
     margin-left: 10px
 
 .btn-sm
-  padding: 1px 7px
+  padding: 1px 9px
   .glyphicon
     top: 0px
     font-size: 10px
