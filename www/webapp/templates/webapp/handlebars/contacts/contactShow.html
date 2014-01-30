@@ -13,14 +13,14 @@
       </div>
       <div class="btn-toolbar pull-right">
         <div class="btn-group">
-          {{#linkTo "contact.edit" controller.session.tenant content class="btn rounded btn-default"}}
-            {% trans "Edit" %}
-          {{/linkTo}}
-        </div>
-        <div class="btn-group">
-          <a class="btn rounded btn-default" {{action 'delete' content}}>
+          <a class="btn btn-rounded btn-default" {{action 'delete' content}}>
             {% trans "Delete" %}
           </a>
+        </div>
+        <div class="btn-group">
+          {{#linkTo "contact.edit" controller.session.tenant content class="btn btn-rounded btn-default"}}
+            {% trans "Edit" %}
+          {{/linkTo}}
         </div>
       </div>
     </section>
@@ -95,11 +95,6 @@
       {{#with quotations}}
         {{partial "invoicing/partials/tableOfQuotations"}}
       {{/with}}
-      {{#unless quotations.length}}
-        <p class="text-center text-orange">
-          <strong>{% trans "No quotations" %}</strong>
-        </p>
-      {{/unless}}
     </section>
     
     <section class="invoices with-head">
@@ -118,11 +113,6 @@
       {{#with invoices}}
         {{partial "invoicing/partials/tableOfInvoices"}}
       {{/with}}
-      {{#unless invoices.length}}
-        <p class="text-center text-green">
-         <strong>{% trans "No invoices" %}</strong>
-        </p>
-      {{/unless}}
     </section>
   {{else}}
     {{partial "core/partials/spinner"}}

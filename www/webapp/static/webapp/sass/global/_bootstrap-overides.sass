@@ -38,50 +38,61 @@ section > .page-header, section > .lead
   line-height: 0.8
 
 // Tables
-.table 
+.table
+  margin-bottom: 0
+
   & > thead > tr > th,
   & > tbody > tr > td
+    padding: 8px 5px
     border: 0
 
   th
     font-weight: normal
   td
     font-weight: bold
+    &.no-data
+      padding-top: 15px
+      text-align: center
+      background: $white
+      font-weight: normal
 
   th, td
-    // vertical-align: middle
-    // border: 0
-    // padding: 10px 5px
-
     &:first-child
       padding-left: 15px
-    
     &:last-child
       padding-right: 15px
-.table.orange,
-.table.green
+
+// .table-striped
+//   tr:nth-of-type(even)
+//     background: #F7F7F7
+
+.table-primary,
+.table-success
   th
     color: $white
 
-.table.orange
+.table-primary
   th
     background-color: $orange
 
-.table.green
+.table-success
   th
     background-color: $green
 
-.table-striped > tbody > tr:nth-child(odd) > td, 
-.table-striped > tbody > tr:nth-child(odd) > th
-  background-color: transparent
+.table-striped > tbody > tr:nth-child(odd) 
+  & > td,
+  & > th
+    background-color: transparent
 
-.table-striped > tbody > tr:nth-child(even) > td, 
-.table-striped > tbody > tr:nth-child(even) > th
-  background-color: #F5F5F5
+.table-striped > tbody > tr:nth-child(even) 
+  & > td, 
+  & > th
+    background-color: #F5F5F5
 
-.table-hover > tbody > tr:hover > td,
-.table-hover > tbody > tr:hover > th
-  background-color: #F5F5F5
+.table-hover > tbody > tr:hover 
+  & > td,
+  & > th
+    background-color: #F5F5F5
 
 
 // Forms
@@ -94,9 +105,14 @@ textarea.form-control-unstyled
   border: 0
   background: transparent
   padding-left: 0
+  padding-top: 0
+  padding-bottom: 0
+  padding-right: 0
   +box-shadow(none)
   &:focus
     +box-shadow(none)
+
+
 
 input.form-control-settings
   border: 0
@@ -192,6 +208,9 @@ input.form-control-settings
 
 
 // Navs
+.nav-tabs > li > a, 
+.nav-tabs > li > a:hover, 
+.nav-tabs > li > a:focus,
 .nav-tabs > li.active > a, 
 .nav-tabs > li.active > a:hover, 
 .nav-tabs > li.active > a:focus
@@ -204,7 +223,8 @@ input.form-control-settings
   font-weight: bold
   color: #939393
 
-.nav-tabs > li > a:hover
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a.active
   color: $text-color
   background-color: #F5F5F5
   border-color: #F5F5F5
@@ -216,7 +236,7 @@ input.form-control-settings
   border-color: #F5F5F5
 
 .nav-tabs
-  border-bottom: 4px solid #F5F5F5
+  border-bottom: 5px solid #F5F5F5
 
 // List
 .list-unstyled

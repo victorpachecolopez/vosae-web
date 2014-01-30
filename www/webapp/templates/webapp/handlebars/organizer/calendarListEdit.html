@@ -79,12 +79,12 @@
       <div class="pull-right">
         <div class="color pull-right clearfix">
           {{view Vosae.Components.CalendarListColorField
+            containerCssClass="success"
             valueBinding="color"}}
         </div>
         <div class="timezone">
           {{#if isOwn}}
             {{view Vosae.Components.TimezonesField
-              containerCssClass="grey"
               valueBinding="calendar.timezone"}}
           {{/if}}
         </div>
@@ -126,6 +126,7 @@
           <td class="method">
             {{view view.reminderMethodField 
               placeholder="{% trans 'Click to choose a user or a group' %}"
+              containerCssClass="success"
               valueBinding="reminder.method"}}
           </td>
           <td class="minutes">
@@ -133,11 +134,11 @@
               valueBinding="reminder.minutes"
               maxlength="5"
               placeholder="0"
-              classNames="no-border no-shadow no-padding no-margin" }}
+              classNames="form-control form-control-unstyled" }}
             {% trans "minutes before" %}
           </td>
           <td class="delete">
-            <a {{action "deleteReminder" reminder}} class="btn btn-icon orange" title="{% trans 'Delete' %}">
+            <a {{action "deleteReminder" reminder}} class="btn btn-icon btn-primary" title="{% trans 'Delete' %}">
               <i class="picto-delete"></i>
             </a>
           </td>
