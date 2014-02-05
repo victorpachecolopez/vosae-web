@@ -86,52 +86,53 @@
         {{#each address in addresses}}
         <tr>
           <td>
-            {{view Em.TextField
-              valueBinding = "address.streetAddress"
-              maxlength    = "128"
-              classNames   = "form-control form-control-unstyled address"
-              placeholder  = "N°, {% trans 'Address' %}" }}
-            {{view Em.TextField
-              valueBinding = "address.extendedAddress"
-              maxlength    = "128"
-              classNames   = "form-control form-control-unstyled extended-address"
-              placeholder  = "{% trans 'Extended address' %}" }}
-            {{view Em.TextField
-              valueBinding = "address.postofficeBox"
-              maxlength    = "64"
-              classNames   = "form-control form-control-unstyled postoffice-box"
-              placeholder  = "{% trans 'Postoffice box' %}" }}
-            {{view Em.TextField
-              valueBinding = "address.postalCode"
-              maxlength    = "64"
-              classNames   = "form-control form-control-unstyled postal-code"
-              placeholder  = "{% trans 'Postal code' %}" }}
-            {{view Em.TextField
-              valueBinding = "address.city"
-              maxlength    = "64"
-              classNames   = "form-control form-control-unstyled city"
-              placeholder  = "{% trans 'City' %}" }}
-            {{view Em.TextField
-              valueBinding = "address.state"
-              maxlength    = "64"
-              classNames   = "form-control form-control-unstyled state"
-              placeholder  = "{% trans 'State' %}" }}
-            {{view Em.TextField
-              valueBinding = "address.country"
-              maxlength    = "64"
-              classNames   = "form-control form-control-unstyled country"
-              placeholder  = "{% trans 'Country' %}" }}
-            {{view view.addressTypesField 
-              contentBinding    = "Vosae.addressTypeChoice"
-              containerCssClass = "type green"
-              hideSearchField   = "true"
-              containerCssClass = "success"
-              valueBinding      = "address.type"
-              optionLabelPath   = "content.name"
-              optionValuePath   = "content.value" }} 
-            <a class="btn btn-icon btn-primary" {{action deleteAddress address}}>
-              <i class="picto-delete"></i>
-            </a>
+            <div class="inner">
+              {{view Em.TextField
+                valueBinding = "address.streetAddress"
+                maxlength    = "128"
+                classNames   = "form-control form-control-unstyled address"
+                placeholder  = "N°, {% trans 'Address' %}" }}
+              {{view Em.TextField
+                valueBinding = "address.extendedAddress"
+                maxlength    = "128"
+                classNames   = "form-control form-control-unstyled extended-address"
+                placeholder  = "{% trans 'Extended address' %}" }}
+              {{view Em.TextField
+                valueBinding = "address.postofficeBox"
+                maxlength    = "64"
+                classNames   = "form-control form-control-unstyled postoffice-box"
+                placeholder  = "{% trans 'Postoffice box' %}" }}
+              {{view Em.TextField
+                valueBinding = "address.postalCode"
+                maxlength    = "64"
+                classNames   = "form-control form-control-unstyled postal-code"
+                placeholder  = "{% trans 'Postal code' %}" }}
+              {{view Em.TextField
+                valueBinding = "address.city"
+                maxlength    = "64"
+                classNames   = "form-control form-control-unstyled city"
+                placeholder  = "{% trans 'City' %}" }}
+              {{view Em.TextField
+                valueBinding = "address.state"
+                maxlength    = "64"
+                classNames   = "form-control form-control-unstyled state"
+                placeholder  = "{% trans 'State' %}" }}
+              {{view Em.TextField
+                valueBinding = "address.country"
+                maxlength    = "64"
+                classNames   = "form-control form-control-unstyled country"
+                placeholder  = "{% trans 'Country' %}" }}
+              {{view view.addressTypesField 
+                contentBinding    = "Vosae.addressTypeChoice"
+                hideSearchField   = "true"
+                containerCssClass = "type success"
+                valueBinding      = "address.type"
+                optionLabelPath   = "content.name"
+                optionValuePath   = "content.value" }} 
+              <a class="btn btn-icon btn-primary" {{action deleteAddress address}}>
+                <i class="picto-delete"></i>
+              </a>
+            </div>
           </td>
         </tr>
         {{/each}}
